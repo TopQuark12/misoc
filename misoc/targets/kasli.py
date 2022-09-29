@@ -49,7 +49,11 @@ class _CRG(Module):
             i_CEB=0,
             i_I=clk125.p, i_IB=clk125.n,
             o_O=self.clk125_buf,
-            o_ODIV2=self.clk125_div2)
+            o_ODIV2=self.clk125_div2,
+            p_CLKCM_CFG="TRUE",
+            p_CLKRCV_TRST="TRUE",
+            p_CLKSWING_CFG=0b11
+        )
 
         mmcm_locked = Signal()
         mmcm_fb = Signal()
